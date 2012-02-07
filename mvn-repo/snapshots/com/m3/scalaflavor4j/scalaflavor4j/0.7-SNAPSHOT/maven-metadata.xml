@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.m3.scalaflavor4j</groupId>
+  <artifactId>scalaflavor4j</artifactId>
+  <version>0.7-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20120207073154</lastUpdated>
+  </versioning>
+</metadata>
