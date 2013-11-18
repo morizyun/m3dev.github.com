@@ -1,0 +1,18 @@
+!!!
+%html{:lang => 'ja'}
+  %head
+    %meta{:charset => 'utf-8'}/
+    %meta{:content => 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible'}/
+    %meta{:content => 'width=device-width, initial-scale=1.0', :name => 'viewport'}/
+    <!-- Use title if it's in the page YAML frontmatter -->
+    %title
+      = current_page.data.title || "ScalikeJDBC"
+    %script{type: 'text/javascript', src: '//codeorigin.jquery.com/jquery-1.10.2.min.js'}
+    %link{rel:'stylesheet', href:'//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'}
+  %body
+    %div.container
+      %div.row
+        %div
+          Hello!
+    %script{type: 'text/javascript', src: '//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js'}
+
