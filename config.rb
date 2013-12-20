@@ -77,3 +77,5 @@ activate :deploy do |deploy|
   deploy.branch = 'master'
 end
 
+I18n.enforce_available_locales = false
+
