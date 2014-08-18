@@ -24,6 +24,18 @@ bundle exec middleman server
 
 で http://localhost:4567/ にブラウザからアクセスできます。
 
+#### M3 Tech Talk
+
+発表のデータは `data/talks.yml` に追記してください。これをもとにページを生成します。
+
+- `title`: タイトル
+- `by`: 発表者名
+- `github_id`: （発表者の GitHub ID）
+- `type`: スライドの種類（speakerdeck, slideshare, html, link に対応しています）
+- `source`: スライド表示用のデータ（`type` が speakerdeck, slideshare, html の場合は、HTML。link の場合は URL。）
+
+YAML の文字列中に `:` を書く際は文字列全体を `''` で囲ってください。`title` や Slideshare 用の `source` で `:` が入りがちです。
+
 #### デプロイ方法
 
 m3dev のメンバーのみが可能な作業です。
