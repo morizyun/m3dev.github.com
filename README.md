@@ -28,4 +28,4 @@ bundle exec middleman server
 
 m3dev のメンバーのみが可能な作業です。
 
-develop ブランチで修正が終わったら `bundle exec middleman deploy` を実行すると master ブランチに build した静的ファイルを反映します。反映まで数分かかることもありますので、気長に待ってみてください。
+`develop` ブランチで修正が終わったら `bundle exec middleman deploy` を実行すると `master` ブランチに build した静的ファイルを反映します。
