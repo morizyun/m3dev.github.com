@@ -79,3 +79,20 @@ end
 
 I18n.enforce_available_locales = false
 
+helpers do
+  # Render slides such as Speakerdeck, Slideshare, HTML and link.
+  def talk_slides(talk)
+    case talk.type
+    when 'speakerdeck'
+      content_tag 'div', talk.source, class: 'slides-speakerdeck'
+    when 'slideshare'
+      talk.source
+    when 'html'
+      talk.source
+    when 'link'
+      content_tag 'p', link_to(talk.source, talk.source, target: '_blank')
+    else
+      fail "No such type: '#{talk.type}'"
+    end
+  end
+end
