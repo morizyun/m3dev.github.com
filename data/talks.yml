@@ -31,7 +31,7 @@
   by: seratch
   github_id: seratch
   type: speakerdeck
-  source: <script async class="speakerdeck-embed" data-id="de12a17070f9013163163abcd19aa7e9" src="//speakerdeck.com/assets/embed.js"></script>
+  source: '<iframe src="http://www.slideshare.net/slideshow/embed_code/32751090" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>'
 
 - title: Rake でログ解析
   by: namu
