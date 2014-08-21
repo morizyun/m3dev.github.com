@@ -8,8 +8,6 @@
   過去の M3 Tech Talk の発表スライドなどを紹介します。
 %p
   社内限定の情報を含む場合や履歴の残らなかったデモなどもあったため、こちらにはあるものはほんの一部です。
-%p
-  今後はできるだけ公開できるものを増やしていければと思います。
 
 - data.talks[1..-1].each do |talk|
   - author = talk.github_id ? link_to("@#{talk.by}", "https://github.com/#{talk.github_id}", target: '_blank') : talk.by
