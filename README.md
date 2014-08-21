@@ -38,6 +38,4 @@ YAML の文字列中に `:` を書く際は文字列全体を `''` で囲って�
 
 #### デプロイ方法
 
-m3dev のメンバーのみが可能な作業です。
-
-`develop` ブランチで修正が終わったら `bundle exec middleman deploy` を実行すると `master` ブランチに build した静的ファイルを反映します。
+GitHub の develop ブランチに push すると、Wercker が自動でデプロイしてくれます。
