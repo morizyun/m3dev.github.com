@@ -43,13 +43,14 @@
 %p
   公開済みのリポジトリはこちらでご覧いただけます。
 
-= link_to 'github.com/m3dev', 'https://github.com/m3dev', target: '_blank'
+%p= link_to 'github.com/m3dev', 'https://github.com/m3dev', target: '_blank'
+.github-repos
 
 %p
 %p
   プライベートでコードを公開しているメンバーも多くいます。こちらからご覧ください。
 
-= link_to 'github/com/m3dev?tab=members', 'https://github.com/m3dev?tab=members', target: '_blank'
+.github-members
 
 %h4
   %i.glyphicon.glyphicon-paperclip
@@ -69,7 +70,7 @@
 %p
   弊社のスタッフが立ち会い可能な日時・内容であれば、会議室を勉強会会場として無料で提供しております。
 
-= link_to 'Doorkeeper での紹介ページ', 'http://www.doorkeeper.jp/%E4%BC%9A%E5%A0%B4/m3', target: '_blank'
+%p= link_to 'Doorkeeper での紹介ページ', 'http://www.doorkeeper.jp/%E4%BC%9A%E5%A0%B4/m3', target: '_blank'
 
 %h4
   %i.glyphicon.glyphicon-heart
@@ -83,3 +84,6 @@
 %hr/
 %p
   = tag :img, src: "/images/oss.png", border: 0
+
+- content_for :javascripts do
+  %script(src="/javascripts/index.js")
