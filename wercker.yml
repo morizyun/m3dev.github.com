@@ -33,7 +33,6 @@ deploy:
             code: |
                 git config --global user.email 'dummy+wercker@bounce.m3.com'
                 git config --global user.name 'wercker'
-                rm -rf .git
 
         - script:
             name: deploy to github pages
