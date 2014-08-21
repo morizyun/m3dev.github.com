@@ -38,6 +38,8 @@ deploy:
             name: deploy to github pages
             code: |
                 cd build
+                pwd
+                git status
                 git add -A
                 git commit -m 'Update'
                 git push --quiet $GH_REMOTE master
