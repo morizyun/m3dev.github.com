@@ -1,0 +1,44 @@
+box: wercker/rvm
+
+build:
+  steps:
+    - rvm-use:
+      version: 2.1.2
+
+    - bundle-install
+
+    - script:
+      name: echo ruby information
+      code: |
+        echo "ruby version $(ruby --version) running"
+        echo "from location $(which ruby)"
+        echo -p "gem list: $(gem list)"
+
+    - script:
+      name: configure git
+      code: |
+        git config --global user.email 'dummy+wercker@bounce.m3.com'
+        git config --global user.name 'wercker'
+        rm -rf .git
+
+    - script:
+      name: clone source
+      code: |
+        git clone --quiet $GIT_REMOTE build
+        pushd build
+        git checkout -b master
+        popd
+
+    - script:
+      name: build with middleman
+      code: bundle exec middleman build --verbose
+
+deploy:
+  steps:
+    - script:
+      name: deploy to github pages
+      code: |
+        cd build
+        git add -A
+        git commit -m 'Update'
+        git push --quiet $GIT_REMOTE master
