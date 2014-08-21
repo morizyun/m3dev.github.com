@@ -24,7 +24,7 @@ build:
         - script:
             name: clone source
             code: |
-                git clone --quiet $GIT_REMOTE build
+                git clone --quiet $GH_REMOTE build
                 pushd build
                 git checkout -b master
                 popd
@@ -41,4 +41,4 @@ deploy:
                 cd build
                 git add -A
                 git commit -m 'Update'
-                git push --quiet $GIT_REMOTE master
+                git push --quiet $GH_REMOTE master
