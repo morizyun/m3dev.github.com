@@ -8,38 +8,11 @@ build:
         - bundle-install
 
         - script:
-            name: echo ruby information
-            code: |
-                echo "ruby version $(ruby --version) running"
-                echo "from location $(which ruby)"
-                echo -p "gem list: $(gem list)"
-
-        - script:
-            name: clone source
-            code: |
-                git clone --quiet $GH_REMOTE build
-                pushd build
-                git checkout -b master
-                popd
-
-        - script:
             name: build with middleman
             code: bundle exec middleman build --verbose
 
 deploy:
     steps:
-        - script:
-            name: configure git with dummy email address
-            code: |
-                git config --global user.email 'dummy+wercker@bounce.m3.com'
-                git config --global user.name 'wercker'
-
-        - script:
-            name: deploy to github pages
-            code: |
-                cd build
-                pwd
-                git status
-                git add -A
-                git commit -m 'Update'
-                git push --quiet $GH_REMOTE master
+        - lukevivier/gh-pages:
+            token: $GITHUB_TOKEN
+            basedir: ./build
