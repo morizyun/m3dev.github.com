@@ -11,7 +11,7 @@
 %p
   今後はできるだけ公開できるものを増やしていければと思います。
 
-- data.talks[0..-1].each do |talk|
+- data.talks.each do |talk|
   - author = talk.github_id ? link_to("@#{talk.by}", "https://github.com/#{talk.github_id}", target: '_blank') : talk.by
 
   %h4 #{talk.title} by #{author}
