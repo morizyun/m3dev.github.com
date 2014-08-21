@@ -33,12 +33,12 @@ build:
             name: build with middleman
             code: bundle exec middleman build --verbose
 
-  deploy:
-      steps:
-          - script:
-              name: deploy to github pages
-              code: |
-                  cd build
-                  git add -A
-                  git commit -m 'Update'
-                  git push --quiet $GIT_REMOTE master
+deploy:
+    steps:
+        - script:
+            name: deploy to github pages
+            code: |
+                cd build
+                git add -A
+                git commit -m 'Update'
+                git push --quiet $GIT_REMOTE master
