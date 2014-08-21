@@ -15,7 +15,7 @@ build:
                 echo -p "gem list: $(gem list)"
 
         - script:
-            name: configure git
+            name: configure git with dummy email address
             code: |
                 git config --global user.email 'dummy+wercker@bounce.m3.com'
                 git config --global user.name 'wercker'
