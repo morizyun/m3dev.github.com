@@ -58,7 +58,12 @@
     '</li>'
   ].join('');
   RepoLoader.prototype.processData = function(response) {
-    return response.data.slice(0, 10);
+    return response.data.sort(function (a, b) { 
+      var c1 = a.stargazers_count, c2 = b.stargazers_count; 
+      if (c1 > c2) return -1;
+      else if (c1 < c2) return 1;
+      else return 0;
+    }).slice(0, 10);
   };
 
   // Loader for Github members.
