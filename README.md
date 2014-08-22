@@ -4,6 +4,9 @@
 
 http://m3dev.github.io/
 
+[![wercker status](https://app.wercker.com/status/c00563e4b57ab0026904909b2752455c/s "wercker status")](https://app.wercker.com/project/bykey/c00563e4b57ab0026904909b2752455c)
+
+
 ### このサイトの運用について
 
 typo の修正やコンテンツの追加は以下のようにして行ってください。
