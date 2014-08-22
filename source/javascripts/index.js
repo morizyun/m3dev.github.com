@@ -20,22 +20,23 @@
     this.url = url;
     this.selector = selector;
   }
-  Loader.prototype.showData = function(data) {
-    var dataList = this.processData(data);
+  Loader.prototype.showData = function(response) {
+    var data = this.processData(response);
     var $ul = $('<ul />');
-    $ul.html(dataList.map(template(this.tmpl)).join(''));
+    $ul.html(data.map(template(this.tmpl)).join(''));
     $ul.appendTo(this.selector);
   };
   Loader.prototype.showError = function(xhr) {
     console.log('Error', xhr.status, xhr.statusText);
   };
   Loader.prototype.start = function() {
-    $.get(this.url)
+    // Get JSON with JSONP.
+    $.getJSON(this.url + '?callback=?')
       .done(this.showData.bind(this))
       .fail(this.showError.bind(this));
   };
-  Loader.prototype.processData = function(data) {
-    return data;
+  Loader.prototype.processData = function(response) {
+    return response.data;
   };
 
   // Loader for Github repos.
@@ -56,8 +57,8 @@
     '</div>',
     '</li>'
   ].join('');
-  RepoLoader.prototype.processData = function(data) {
-    return data.slice(0, 10);
+  RepoLoader.prototype.processData = function(response) {
+    return response.data.slice(0, 10);
   };
 
   // Loader for Github members.
