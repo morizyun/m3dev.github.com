@@ -1,8 +1,15 @@
+- title: Intro to RxScala
+  by: lloydmeta
+  github_id: lloydmeta
+  type: link
+  source: http://beachape.com/rx-scala-intro/
+
 - title: Introduction to Grunt
   by: shuhei
   github_id: shuhei
   type: speakerdeck
   source: <script async class="speakerdeck-embed" data-id="39e78f00fade0131d88d6a0d18b48761" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
 - title: 'Guess the Country: Playing with Twitter Streaming API'
   by: cb372
   github_id: cb372
